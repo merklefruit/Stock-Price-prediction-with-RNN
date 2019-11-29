@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+
+			<h1 align="center">Trading Bot with RNN inference</h1>
+			<br>
+
+			<div class="jumbotron">
+			 	<p class="lead">
+			 		This trading bot was created as a 1 day project. It is by no means complete, it is meant to be a proof of concept.
+					In particular, I made this web app for experimenting with time series data and recurrent neural networks.
+			 	</p>
+			 		<hr>
+			 	<p>
+					The artificial neural network architecture for this model is the following:
+						4 LSTM fully activated (RELU) layers,
+						4 Dropout layers to improve convergence and a final Dense 
+						layer to obtain the output prediction.
+						I used ADAM optimizer and SME loss.
+			 	</p>
+			  	<hr class="my-4">
+			  	<p>
+				  The price data is gathered from the Alpha Vantage free API.
+				  This project is open-source on GitHub. If you're interested in the specifics of the web app,
+				  feel free to write me an email or <a href="{{url_for('about_me')}}">read more about me.</a>
+			  	</p>
+			  	<a class="btn btn-primary" href="{{ url_for('login') }}" role="button" style="margin-top: 15px">Login or Sign up to access the app</a>
+			</div>
+
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+</div>
+
+
+{% endblock %}

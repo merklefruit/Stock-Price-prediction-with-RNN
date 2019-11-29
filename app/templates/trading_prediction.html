@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+    <div align="center">
+        <img src="{{url_for('static', filename='ai_logo.png')}}">
+    </div>
+
+
+    <div align="center" style="margin-top: 20px">
+        <h4>Now press Predict Price to train the neural network.</h4>
+        <p>THIS STEP WILL TAKE SEVERAL MINUTES</p>
+    </div>
+
+    <div class="container" align="center" style="float: left; margin-top: 20px">
+        <p>Stock selected: <strong>{{ stock_name }}</strong></p>
+        <form method="POST" action="{{url_for('predict_price')}}">
+            <input type="radio" name="stock_name_query" value="{{ stock_name }}" checked style="display: none">
+            <button class="btn btn-primary" id="predict_price" href="#" type="submit">Train Network and Predict Price</button>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" style="margin-top: 40px">
+            <p><strong>So, how does it work?</strong><br>
+                RNNs (recurrent neural networks) are very different from the classical machine learning
+                models. In fact, they are the first Deep Learning algorithm that can memorize or remember previous inputs
+                in memory. This works really well with huge datasets and for predicting time-series data.
+            </p>
+            <p>
+                <strong>Long Short Term Memory (LSTM) Networks</strong><br>
+                LSTMs are a special kind of RNNs, which are capable of learning long-term dependencies.
+                <br>
+                The model I've decided to use is composed of 4 LSTM layers, amogst others. Each layer takes into
+                consideration the last 60 days of data to make a prediction. This holds true for every predicted
+                output.
+                <br>
+                This "memory" feature of LSTM makes them very powerful for time-series data, but it makes training 
+                time much longer than usual.
+            </p>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+{% endblock %}
