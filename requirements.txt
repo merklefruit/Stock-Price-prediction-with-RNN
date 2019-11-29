@@ -40,7 +40,6 @@ matplotlib==3.1.2
 numpy==1.16.3
 pandas==0.25.3
 pandas-datareader==0.8.1
-PIL==1.1.7
 Pillow==6.2.1
 pillowcase==2.0.0
 protobuf==3.7.1
