@@ -1,26 +1,32 @@
-### (Find More about this project on [my website](https://nicolasracchi.com/blog/stock_price_prediction))
+## Find More about this project on [my website](https://nicolasracchi.com/blog/stock_price_prediction)
 
 # Stock-Price-prediction-with-RNN
 
-This web app is build with Flask in python.
+This web app is built with Flask in Python.
 
 ## Example of prediction output:
 
 ![The output graph from the web app](nvda_prediction.png)
 
 ## Instructions to run:
+```bash
+git clone https://github.com/nicolas-racchi/Stock-Price-prediction-with-RNN && cd Stock-Price-prediction-with-RNN
 
-1. CD in the trading_bot directory
+# If you're on MacOS/Linux:
+export FLASK_APP=app.py
 
-2. If you're on MacOS/Linux:  `export FLASK_APP=app.py`
-    
-    If you're on Windows: `set FLASK_APP=app.py`
+# If you're on Windows: 
+set FLASK_APP=app.py
 
-3. (Optional): Set up your python virtual environment
+# (Optional): Set up your python virtual environment
+virtualenv venv
 
-3. Install requirements: `pip install -r requirements.txt`
+# Install requirements 
+pip install -r requirements.txt
 
-4. Start the app: `flask run`
+# Start the app:
+flask run
+```
 
 ## How it works:
 
@@ -30,8 +36,6 @@ This web app is build with Flask in python.
 * When the prediction has been completed, you'll see a graph of the ACTUAL vs PREDICTED stock price.
 
 
-## Disclaimer:
+### Disclaimer:
 
-This project was made in 1 day and it was meant to learn about RNNs and web development.
-
-This is not meant to be an investment guide.
+_This is not meant to be an investment guide. Take this material as useful for learning about neural networks and stock price prediction._
