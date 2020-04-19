@@ -10,7 +10,8 @@ This web app is built with Flask in Python.
 
 ## Instructions to run:
 ```bash
-git clone https://github.com/nicolas-racchi/Stock-Price-prediction-with-RNN && cd Stock-Price-prediction-with-RNN
+git clone https://github.com/nicolas-racchi/Stock-Price-prediction-with-RNN
+cd Stock-Price-prediction-with-RNN
 
 # If you're on MacOS/Linux:
 export FLASK_APP=app.py
