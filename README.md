@@ -1,4 +1,4 @@
-## Find More about this project on [my website](https://nicolasracchi.com/blog/stock_price_prediction)
+*If you want to know more, I've written [an article](https://nicolasracchi.com/blog/stock_price_prediction) on my blog about this project!*
 
 # Stock-Price-prediction-with-RNN
 
