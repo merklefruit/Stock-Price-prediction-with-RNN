@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+    <div align="center">
+        <img src="{{url_for('static', filename='ai_logo.png')}}">
+    </div>
+
+    <div align="center" style="margin-top: 30px">
+        <h4>This bot predicts stock prices using a Recurrent Neural Network model (LSTM).</h4>
+    </div>
+    <div align="center">
+            <h4>First, choose a stock and press Download Data to gather price data from Alpha Vantage API</h4>
+    </div>
+
+
+    <form align="center" style="margin-top: 20px" class="form-inline" method="POST" 
+            action="{{ url_for('trading_prediction') }}">
+	  <div class="form-group">
+	    <div class="input-group">
+	            <select name="namequery" class="form-control inputstl">
+	            	<option value="">Choose Stock</option>
+	  				<option value="GOOG">GOOGLE (GOOG)</option>
+					<option value="AMZN">AMAZON (AMZN)</option>
+					<option value="TSLA">TESLA (TSLA)</option>
+					<option value="AAPL">APPLE (AAPL)</option>
+					<option value="PYPL">PAYPAL (PYPL)</option>
+					<option value="ISRG">INTUITIVE (ISRG)</option>
+					<option value="BABA">ALIBABA (BABA)</option>
+					<option value="MSFT">MICROSOFT (MSFT)</option>
+					<option value="AMD">AMD (AMD)</option>
+					<option value="NVDA">NVIDIA (NVDA)</option>
+	            </select>	
+	    </div>
+        <button class="btn btn-primary" href="#" type="submit">Download Data</button>
+	  </div>
+	</form>
+
+{% endblock %}
