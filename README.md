@@ -1,12 +1,12 @@
-**If you want to know more, I've written [an article](https://nicolasracchi.com/blog/stock_price_prediction) on my blog about this project!**
-
 # Stock-Price-prediction-with-RNN
 
-This web app is built with Flask in Python.
+> **If you’d like to know more, I've written [an article](https://nicolasracchi.com/blog/stock_price_prediction) on my blog about this project!**
+
+This web app is built with Flask in Python. It consists of a recurrent neural network application for stock price prediction. It’s been instrumental in learning how to train neural networks in the cloud and use a remotely trained network to produce results.
 
 ## Example of prediction output:
 
-![The output graph from the web app](nvda_prediction.png)
+<div align=center><img src=nvda_prediction.png></img></div>
 
 ## Instructions to run:
 ```bash
